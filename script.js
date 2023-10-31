@@ -130,13 +130,13 @@ for (let i = 1; i <= 3; i++) {
   }
 }*/
 
-for (let i = 1; i <= 3; i++) {
+/*for (let i = 1; i <= 3; i++) {
   const nombre = prompt(`Ingrese el nombre del estudiante`+i+`:`);
   const notaFinal = parseInt(prompt(`Ingrese la nota final del estudiante` +i+`:`));
 
   switch (true) {
     case (notaFinal >= 1 && notaFinal <= 3.3):
-      console.log(nombre + ` tiene un desempeñox bajo.`);
+      console.log(nombre + ` tiene un desempeño bajo.`);
       break;
     case (notaFinal >= 3.4 && notaFinal <= 3.8):
       console.log(nombre + ` tiene un desempeño básico.`);
@@ -146,5 +146,54 @@ for (let i = 1; i <= 3; i++) {
       break;
     default:
       console.log(nombre + ` tiene un desempeño superior.`);
+  }
+}*/
+/*
+for (let i = 1; i <= 3; i++) {
+  let notaFinal;
+  do {
+    notaFinal = parseInt(prompt(`Ingrese la nota final del estudiante` +i+`:`));
+    if (notaFinal < 1 || notaFinal > 5) {
+      alert("La nota debe estar en el rango de 1 a 5. Inténtalo de nuevo.");
+    }
+  } while (notaFinal < 1 || notaFinal > 5);
+
+  switch (true) {
+    case (notaFinal >= 1 && notaFinal <= 3.3):
+      console.log(`El estudiante` +i+ `tiene un rendimiento bajo.`);
+      break;
+    case (notaFinal >= 3.4 && notaFinal <= 3.8):
+      console.log(`El estudiante` +i+ `tiene un rendimiento básico.`);
+      break;
+    case (notaFinal >= 3.9 && notaFinal <= 4.4):
+      console.log(`El estudiante` +i+ `tiene un rendimiento alto.`);
+      break;
+    default:
+      console.log(`El estudiante` +i+ `tiene un rendimiento superior.`);
+  }
+}*/
+
+for (let i = 1; i <= 3; i++) {
+  const nombre = prompt(`Ingrese el nombre del estudiante` +i+ `:`);
+  let notaFinal;
+  do {
+    notaFinal = parseInt(prompt(`Ingrese la nota final de ` +nombre+ `:`));
+    if (notaFinal < 1 || notaFinal > 5) {
+      alert("La nota debe estar en el rango de 1 a 5. Inténtalo de nuevo.");
+    }
+  } while (notaFinal < 1 || notaFinal > 5);
+
+  switch (true) {
+    case (notaFinal >= 1 && notaFinal <= 3.3):
+      console.log(nombre+ ` tiene un rendimiento bajo.`);
+      break;
+    case (notaFinal >= 3.4 && notaFinal <= 3.8):
+      console.log(nombre+ ` tiene un rendimiento básico.`);
+      break;
+    case (notaFinal >= 3.9 && notaFinal <= 4.4):
+      console.log(nombre+ ` tiene un rendimiento alto.`);
+      break;
+    default:
+      console.log(nombre+ ` tiene un rendimiento superior.`);
   }
 }
